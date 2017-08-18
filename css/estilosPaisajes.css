@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Dancing Script', cursive;
+  src: url('DancingScript-Regular.otf');
+}
+
+body{
+  font-family: 'Dancing Script', cursive;
+  background: #02010a;
+}
+
+img{
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+
+#cabecera{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  margin: auto;
+  animation-name: slidein-animacion;
+	animation-duration: 2s;
+}
+
+@keyframes slidein-animacion {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+#cabecera h1{
+
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  font-size:200%;
+}
+
+#cabecera a{
+  color: white;
+}
+
+#cabecera a[href^="paisajes"]{
+  text-decoration: none;
+}
+
+#piedepagina{
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  margin: auto;
+}
+
+
+#imagen4{
+  -webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#imagen5 img{
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#imagen6 img{
+  -webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+#imagen7 img{
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#imagen9 img{
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#galeria{
+
+
+}
+.Derechos p img{
+  -ms-transform: scale(0.5, 0.5); /* IE 9 */
+    -webkit-transform: scale(0.5, 0.5); /* Safari */
+    transform: scale(0.5, 0.5);
+    float: left;
+    clear: both;
+}
+
+@media (min-width: 901px){
+  #contenido{
+    width: 900px;
+    margin: auto;
+  }
+  #cabecera{
+    height: 70px;
+  }
+  #cabecera a{
+    padding-left: 10px;
+    margin-top: 50px;
+  }
+  #cabecera h1{
+    padding-left: 10px;
+    float: left;
+  }
+
+  #cabecera a{
+    float: right;
+  }
+
+  #piedepagina{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    padding: none;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  }
+
+  #piedepagina div{
+
+    padding-right: 70px;
+  }
+
+  #galeria{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+@media (max-width: 900px){
+  #contenido{
+    width: 100%;
+  }
+  #cabecera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+  }
+  #cabecera h1{
+    padding: auto;
+    text-align: center;
+  }
+  #cabecera a{
+    padding-right: 10px;
+  }
+
+
+  #cabecera .menu{
+    box-sizing: border-box;
+    order: 2;
+  }
+  #menu{
+    width: 50%;
+    margin: 0 auto;
+  }
+  #piedepagina{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    padding: none;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  }
+  #galeria{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

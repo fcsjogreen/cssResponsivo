@@ -1,0 +1,240 @@
+
+@font-face {
+  font-family: 'Dancing Script', cursive;
+  src: url('DancingScript-Regular.otf');
+}
+
+body{
+  font-family: 'Dancing Script', cursive;
+  background: #02010a;
+}
+
+#cabecera{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  margin: auto;
+  animation-name: slidein-animacion;
+	animation-duration: 2s;
+}
+
+#cabecera h1{
+
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  font-size:200%;
+}
+
+#cabecera a{
+  color: white;
+}
+
+#cabecera a[href^="index"]{
+  text-decoration: none;
+}
+
+
+#imagenCentral{
+  background-color: #82c3a6;
+}
+
+
+
+#imagen1 img{
+
+  padding: 5px;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+
+#imagenSecundaria{
+  padding: 5px;
+  background: #d5c75f;
+  border: 1px;
+}
+
+#imagen2 img{
+  margin: 5px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  -webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
+  transition: filter 1s, transform 1s;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+
+#imagen2 img:hover{
+  transform: rotate(10deg);
+  -webkit-filter: drop-shadow(2px 0px 0px #82c3a6);
+	filter: drop-shadow(2px 0px 0px #82c3a6);
+
+}
+
+#imagen3 img{
+  margin: 5px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  -webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
+  transition: filter 1s, transform 1s;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+
+#imagen3 img:hover{
+  -ms-transform: translate(20px, -5px); /* IE 9 */
+  -webkit-transform: translate(20px, -5px); /* Safari */
+  transform: translate(20px, -5px);
+  filter: drop-shadow(2px 0px 0px  #82c3a6);
+}
+
+#piedepagina{
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  margin: auto;
+}
+
+
+
+.Derechos p img{
+
+  -ms-transform: scale(0.5, 0.5); /* IE 9 */
+    -webkit-transform: scale(0.5, 0.5); /* Safari */
+    transform: scale(0.5, 0.5);
+    float: left;
+    clear: both;
+}
+@keyframes slidein-animacion {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+
+
+@media (min-width: 901px){
+  #contenido{
+    width: 900px;
+    margin: auto;
+  }
+  #cabecera{
+    height: 70px;
+
+  }
+  #cabecera a{
+    padding-left: 10px;
+    margin-top: 50px;
+  }
+  #cabecera h1{
+    padding-left: 10px;
+    float: left;
+  }
+
+  #cabecera a{
+    float: right;
+  }
+
+
+
+  #imagen1 img{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #imagenSecundaria{
+    display: flex;
+    flex-flow: row;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imagen2 img{
+    flex:none;
+  }
+
+  #imagen3 img{
+   flex:none;
+  }
+
+  #piedepagina{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    padding: none;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  }
+
+  #piedepagina div{
+
+    padding-right: 70px;
+  }
+
+
+}
+
+@media (max-width: 900px){
+  #contenido{
+    width: 100%;
+  }
+  #cabecera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+  }
+  #cabecera h1{
+    padding: auto;
+    text-align: center;
+  }
+  #cabecera a{
+    padding-right: 10px;
+  }
+
+
+  #cabecera .menu{
+    box-sizing: border-box;
+    order: 2;
+  }
+
+  #menu{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  #imagen1 img{
+    width: 80%;
+  }
+
+  #imaagenSecundaria{
+
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  #imagen2 img{
+    box-sizing: border-box;
+    width: 80%;
+    order: 1;
+  }
+
+  #imagen3 img{
+    box-sizing: border-box;
+    width: 80%;
+    order: 2;
+  }
+
+  #piedepagina{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    padding: none;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  }
+}
